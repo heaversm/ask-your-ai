@@ -1,0 +1,25 @@
+{
+  "name": "ask-your-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node e2e/run.mjs --headless",
+    "install-host": "node lib/install-host.mjs",
+    "remove-host": "node lib/install-host.mjs --remove",
+    "site": "node site/server.mjs",
+    "test:claude": "node e2e/run.mjs --headless --ai=claude",
+    "demo": "node e2e/demo.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": "true",
+  "dependencies": {
+    "@agentclientprotocol/claude-agent-acp": "^0.109.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.13.0"
+  }
+}

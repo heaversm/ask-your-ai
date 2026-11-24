@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Ask Your AI",
+  "version": "0.1.0",
+  "description": "Lets a web page hand a task to your own AI. The browser attaches your preferences out of the page's sight, checks everything the AI asks to do against a permission slip, checks the answer before the page sees it, and keeps its own log. Prototype.",
+  "browser_specific_settings": { "gecko": { "id": "ask-your-ai@fotw.local", "strict_min_version": "128.0" } },
+  "permissions": ["nativeMessaging", "storage"],
+  "background": { "scripts": ["background.js"], "persistent": true },
+  "content_scripts": [{ "matches": ["http://localhost/*", "http://127.0.0.1/*"], "js": ["content.js"], "run_at": "document_start" }],
+  "browser_action": { "default_title": "Ask Your AI: log", "default_popup": "log.html" }
+}

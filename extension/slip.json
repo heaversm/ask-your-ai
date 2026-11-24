@@ -1,0 +1,11 @@
+{
+  "_about": "Which sites may ask your AI for help, and what your AI may do for each. {workspace} is the sample folder this prototype ships with; install-host.mjs writes its real path to paths.json.",
+  "sites": {
+    "http://localhost:8095": {
+      "name": "Test Mail",
+      "tools": ["Read", "Glob", "Grep"],
+      "allow": { "read": ["{workspace}"], "search": ["{workspace}"] },
+      "checks": ["secrets", "your preferences", "your preferences, in other words", "new links"]
+    }
+  }
+}

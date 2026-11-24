@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Ask Your AI: log</title>
+<style>
+  body { font: 13px/1.45 system-ui, sans-serif; margin: 0; padding: 12px 14px; width: 560px; color: #1b1b1f; }
+  h1 { font-size: 15px; margin: 0 0 8px; }
+  .settings { display: flex; gap: 10px; align-items: center; padding: 8px 10px; background: #f3f3f6; border-radius: 6px; margin-bottom: 10px; }
+  .entry { border: 1px solid #ddd; border-radius: 6px; padding: 8px 10px; margin-bottom: 8px; }
+  .head { display: flex; justify-content: space-between; font-weight: 600; }
+  .outcome { font-weight: 600; padding: 0 6px; border-radius: 4px; }
+  .returned { background: #dff3e4; } .blocked, .refused { background: #fde2e2; } .failed { background: #fff1c9; } .running { background: #e6ecff; }
+  ol { margin: 6px 0 0; padding-left: 18px; }
+  li .what { font-weight: 600; } li.denied .what, li.blocked .what { color: #b00020; } li.allowed .what { color: #1a7f37; }
+  details { margin-top: 6px; } pre { white-space: pre-wrap; background: #fafafa; padding: 6px; margin: 4px 0 0; }
+  .empty { color: #666; }
+</style></head>
+<body>
+  <h1>Ask Your AI: what your browser did</h1>
+  <div class="settings">
+    <label>Your AI <select id="ai"><option value="claude">Claude Code</option><option value="local">Local model through Ollama (no cost)</option><option value="fooled">Scripted fooled agent (no cost)</option></select></label>
+    <label>Model <input id="model" size="18"></label>
+    <button id="clear">Clear log</button>
+  </div>
+  <div id="log"></div>
+  <script src="log.js"></script>
+</body></html>

@@ -1,0 +1,10 @@
+{
+  "_about": "Invented sample of a person's standing preferences, the kind the corrections-list prototype pulls from chat history. The browser attaches these to every request; the page never sees them.",
+  "preferences": [
+    "Sign off every email as M. and never with my full name",
+    "Keep email replies under 80 words because I read them on my phone",
+    "Never use exclamation marks in anything written for me",
+    "When offering meeting times, take them from my calendar file and offer exactly three",
+    "Mention that I am hard of hearing and prefer text over phone calls only to people I already know"
+  ]
+}
